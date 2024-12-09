@@ -8,7 +8,19 @@ class CustomUserAdmin(UserAdmin):
     ordering= ('-date_joined',)
     filter_horizontal = ()
     list_filter = ()
-    fieldsets = ()
+
+    fieldsets = (
+        (None, {'fields': ('email', 'username', 'password')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name', 'phone_number')}),
+        ('Permissions', {'fields': ('role', 'is_staff', 'is_active', 'is_superadmin')}),
+    )
+
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'username', 'password1', 'password2')}
+         ),
+    )
 
 
 admin.site.register(User,CustomUserAdmin)
