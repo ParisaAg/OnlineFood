@@ -40,10 +40,10 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    RESTAURANT = 1
+    Vendor = 1
     CUSTOMER = 2
     ROLE_CHOICES = (
-        (RESTAURANT, 'Restaurant'),
+        (Vendor, 'Vendor'),
         (CUSTOMER, 'Customer'),
     )
 
