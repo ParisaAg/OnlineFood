@@ -3,8 +3,8 @@ from vendor.models import Vendor
 # Register your models here.
 
 class VendorAdmin(admin.ModelAdmin):
-    list_display = ['user', 'Vendor_name', 'is_approved', 'created_at',]
-    list_display_links=['user', 'Vendor_name',]
+    list_display = ['user', 'vendor_name', 'is_approved', 'created_at',]
+    list_display_links=['user', 'vendor_name',]
 
 
 
