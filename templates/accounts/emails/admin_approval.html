@@ -1,0 +1,15 @@
+{% autoescape off %}
+Hi {{user.first_name}}
+
+please click the link below to approve your  account.
+{% if is_approved %}
+congradulation your account has been approved by our administrator and now you can publish your food through this website!
+for further information please cnntact us
+parisaaghaei18@gmail.com
+
+{% else %}
+ we are really sorry!! your account can not be approved by our administrator
+for further information please cnntact us
+parisaaghaei18@gmail.com
+ {% endif %}
+{% endautoescape %} 
