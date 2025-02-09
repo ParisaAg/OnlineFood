@@ -8,3 +8,5 @@ class VendorForm(forms.ModelForm):
     class Meta:
         model= Vendor
         fields = ['vendor_name', 'license']
+
+
